@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曾仰琳 - 金融记者求职作品集</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "思源黑体", sans-serif;
+        }
+        body {
+            color: #333;
+            background: #fff;
+            line-height: 1.8;
+            scroll-behavior: smooth;
+        }
+        a {
+            text-decoration: none;
+            color: #0F4C81;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            list-style: none;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        .section-title {
+            font-size: 24px;
+            color: #0F4C81;
+            font-weight: bold;
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: #0F4C81;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            z-index: 999;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav .logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0F4C81;
+        }
+        .nav .nav-list {
+            display: flex;
+            gap: 20px;
+        }
+        .nav .nav-list a {
+            color: #333;
+            font-size: 14px;
+        }
+        .nav .nav-list a:hover {
+            color: #0F4C81;
+            text-decoration: none;
+        }
+        .hamburger {
+            display: none;
+            font-size: 20px;
+            color: #0F4C81;
+            cursor: pointer;
+        }
+        .banner {
+            width: 100%;
+            background: linear-gradient(#f8f8f8, #f5f5f5);
+            padding: 120px 0 80px;
+            margin-top: 60px;
+            text-align: center;
+            position: relative;
+        }
+        .banner::before {
+            content: "\f155";
+            font-family: "Font Awesome 6 Solid";
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            font-size: 80px;
+            color: rgba(15, 76, 129, 0.05);
+        }
+        .banner::after {
+            content: "\f002";
+            font-family: "Font Awesome 6 Solid";
+            position: absolute;
+            bottom: 20%;
+            right: 10%;
+            font-size: 80px;
+            color: rgba(15, 76, 129, 0.05);
+        }
+        .banner h1 {
+            font-size: 32px;
+            color: #0F4C81;
+            margin-bottom: 15px;
+        }
+        .banner h2 {
+            font-size: 18px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .banner .data {
+            font-size: 16px;
+            color: #0F4C81;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .banner .ability {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .banner small {
+            font-size: 12px;
+            color: #666;
+            display: block;
+            margin-bottom: 30px;
+        }
+        .banner .btn {
+            display: inline-block;
+            background: #0F4C81;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .banner .btn:hover {
+            background: #0c3d6e;
+            text-decoration: none;
+        }
+        .advantage {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .advantage-card {
+            flex: 1;
+            min-width: 200px;
+            padding: 25px 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: box-shadow 0.3s;
+        }
+        .advantage-card:hover {
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        .advantage-card h3 {
+            font-size: 18px;
+            color: #0F4C81;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .advantage-card p {
+            font-size: 14px;
+            color: #666;
+        }
+        .works .sub-title {
+            font-size: 20px;
+            color: #0F4C81;
+            font-weight: bold;
+            margin: 40px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .works .sub-title i {
+            font-size: 18px;
+        }
+        .works .desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .works-list {
+            font-size: 14px;
+            line-height: 2;
+        }
+        .works-list li {
+            margin-bottom: 10px;
+        }
+        .works-list a {
+            text-decoration: underline;
+        }
+        .works-tip {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .experience-timeline {
+            margin: 30px 0;
+            padding-left: 20px;
+            border-left: 2px solid #0F4C81;
+            position: relative;
+        }
+        .timeline-item {
+            margin-bottom: 35px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -31px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #0F4C81;
+            border-radius: 50%;
+        }
+        .timeline-item h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .timeline-item h3 small {
+            font-size: 12px;
+            color: #666;
+            font-weight: normal;
+            margin-left: 5px;
+        }
+        .timeline-item p {
+            font-size: 14px;
+            color: #666;
+        }
+        .timeline-item p .award {
+            color: #0F4C81;
+            font-weight: bold;
+        }
+        .education-list {
+            margin: 30px 0;
+        }
+        .education-item {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .education-item small {
+            font-size: 14px;
+            color: #666;
+            display: block;
+            margin-top: 5px;
+        }
+        .contact-info {
+            font-size: 18px;
+            line-height: 2.5;
+            margin: 30px 0;
+            color: #333;
+        }
+        .footer {
+            width: 100%;
+            background: #f5f5f5;
+            padding: 25px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 50px;
+        }
+        @media (max-width: 768px) {
+            .nav .nav-list {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .banner {
+                padding: 80px 0 60px;
+            }
+            .banner h1 {
+                font-size: 24px;
+            }
+            .banner::before, .banner::after {
+                font-size: 50px;
+            }
+            .section-title {
+                font-size: 20px;
+            }
+            .works .sub-title {
+                font-size: 18px;
+            }
+            .education-item {
+                font-size: 16px;
+            }
+            .contact-info {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">曾仰琳 · 金融记者求职作品集</div>
+        <ul class="nav-list">
+            <li><a href="#banner">首页</a></li>
+            <li><a href="#advantage">核心优势</a></li>
+            <li><a href="#works">作品集</a></li>
+            <li><a href="#experience">从业经历</a></li>
+            <li><a href="#contact">联系方式</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="banner" id="banner">
+        <h1>曾仰琳</h1>
+        <h2>9年从业经验 | 资深金融记者</h2>
+        <p>深耕银行/金融科技/养老金融/绿色金融赛道</p>
+        <p class="ability"><strong>核心能力</strong>：深度调研 | 政策解读 | 独家报道 | 专题策划</p>
+        <small>专注金融领域深度报道，兼具媒体视角与金融行业实操认知</small>
+        <a href="#works" class="btn">查看作品集</a>
+    </section>
+
+    <div class="container">
+        <section id="advantage">
+            <h2 class="section-title">核心专业优势</h2>
+            <div class="advantage">
+                <div class="advantage-card">
+                    <h3>赛道深耕</h3>
+                    <p>9年聚焦金融领域，深耕银行、数字金融、养老金融、绿色金融等领域，熟悉金融监管政策与行业发展脉络，精准捕捉行业热点与趋势。</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>调研能力</h3>
+                    <p>独立完成百人次以上行业调研/用户访谈，擅长从一手信息挖掘核心价值，策划“消金十年回头望”等多个行业专题。</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>跨界视角</h3>
+                    <p>兼具媒体记者、金融科技企业公关、自由内容策划经历，懂媒体报道逻辑，更了解金融机构业务本质，报道视角更立体全面。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="works">
+            <h2 class="section-title">作品集</h2>
+            <p class="works-tip">以下均为原创深度作品，点击标题可直达原文查看</p>
+
+            <h3 class="sub-title"><i class="fas fa-building-columns"></i>银行领域报道</h3>
+            <p class="desc">聚焦银行行业转型、实体经济赋能、业务创新，兼具行业特写与深度分析</p>
+            <ol class="works-list">
+                <li>【特写】“把失去的订单抢回来！”银行“贷”动经济新活力丨春天经济日记 → <a href="https://www.jiemian.com/article/8979323.html" target="_blank">点击查看</a></li>
+                <li>【深度】“逐张清点”的银行柜员大撤退，“铁饭碗”为啥不香了？ → <a href="https://www.jiemian.com/article/6835145.html" target="_blank">点击查看</a></li>
+                <li>【深度】将“废弃矿山”变为“绿水青山”，银行参与EOD模式如何实现收益？ → <a href="https://www.jiemian.com/article/9586566.html" target="_blank">点击查看</a></li>
+            </ol>
+
+            <h3 class="sub-title"><i class="fas fa-coins"></i>数字金融领域报道</h3>
+            <p class="desc">覆盖消费金融、金融科技、互联网金融监管，实测+独家+深度，还原行业真实生态</p>
+            <ol class="works-list">
+                <li>【深度】“干嘛一次性付完！”调查访谈229位华尔街英语贷款学员，金融机构失职了吗？ → <a href="https://www.jiemian.com/article/6502966.html" target="_blank">点击查看</a></li>
+                <li>【深度】互联网的尽头是借贷？抖音快手爱腾优，揭开视频头部玩家们的金融流量生意经 → <a href="https://www.jiemian.com/article/6390169.html" target="_blank">点击查看</a></li>
+                <li>【实测】20款主流贷款产品集体“卸妆”：花呗借呗们的真实利率究竟是多少？ → <a href="https://www.jiemian.com/article/6038813.html" target="_blank">点击查看</a></li>
+                <li>【深度】互联网存款产品被踩“急刹车”背后 → <a href="https://www.jiemian.com/article/5513193.html" target="_blank">点击查看</a></li>
+                <li>【深度】蚂蚁“失火”，殃及池鱼？ → <a href="https://www.jiemian.com/article/5226923.html" target="_blank">点击查看</a></li>
+                <li>【深度】培训贷卷土重来！在校生被诱导贷款，海尔消金、湖北消金要为此负责吗？ → <a href="https://www.jiemian.com/article/7847825.html" target="_blank">点击查看</a></li>
+                <li>【独家】起底4家持牌消费金融公司2020年人事变动：百度系、国美系和监管背景浮现 → <a href="https://finance.ifeng.com/c/7ucBLNMYhbk" target="_blank">点击查看</a></li>
+                <li>【深度】7家巨头金融牌照超50张！金控监管办法落地：首批监管试点近2年，蚂蚁、苏宁的调整释放什么信号？ → <a href="https://mp.weixin.qq.com/s/SRlZ5my29QLSnAwT9rfQoQ" target="_blank">点击查看</a></li>
+                <li>【深度】金融科技巨头更名潮来袭：继京东数科、蚂蚁集团后360金融升级为360数科，背后有何意图？ → <a href="https://mp.weixin.qq.com/s/EmjNz6JF3XOCTXKkAuu2rg" target="_blank">点击查看</a></li>
+                <li>【深度】腾讯系和阿里系“相爱相杀”？美团取消“支付宝”仅一天又加上，饿了么悄然加上“微信支付”，支付宝隔天上线“花呗月月付”回怼 → <a href="https://mp.weixin.qq.com/s/JG6PVv_oweIOfCv7Z9J25A" target="_blank">点击查看</a></li>
+            </ol>
+
+            <h3 class="sub-title"><i class="fas fa-sack-dollar"></i>养老金融领域报道</h3>
+            <p class="desc">聚焦个人养老金制度落地、产品创新、行业痛点，以调研+分析解读前沿赛道发展</p>
+            <ol class="works-list">
+                <li>【深度】养老金融赛道四大产品集结，你的养老钱交给谁打理更安心？ → <a href="https://www.jiemian.com/article/8096323.html" target="_blank">点击查看</a></li>
+                <li>【深度】个人养老金制度落地半年纪：产品为何“叫好不叫座”？“开户热投资冷”何解? → <a href="https://www.jiemian.com/article/9495800.html" target="_blank">点击查看</a></li>
+                <li>【调查】个人养老金是否有足够吸引力？我们和145位读者聊了聊…… → <a href="https://www.jiemian.com/article/10433708.html" target="_blank">点击查看</a></li>
+                <li>【深度】你的个人养老金账户还没开吗？银行获客营销大战升级 → <a href="https://www.jiemian.com/article/10373482.html" target="_blank">点击查看</a></li>
+                <li>【深度】个人养老金储蓄产品货架已上465款，哪些类型可供挑选？ → <a href="https://www.jiemian.com/article/10398808.html" target="_blank">点击查看</a></li>
+                <li>【深度】个人养老金一周年“新期待”：产品更好挑，收益更稳健，提取更灵活 → <a href="https://www.jiemian.com/article/10443702.html" target="_blank">点击查看</a></li>
+            </ol>
+
+            <h3 class="sub-title"><i class="fas fa-leaf"></i>绿色金融领域报道</h3>
+            <p class="desc">围绕“双碳”目标，解读绿色金融政策，盘点银行绿色布局，挖掘行业发展机遇</p>
+            <ol class="works-list">
+                <li>【数据】“3060”双碳目标提出三周年，16家头部商业银行“含绿量”谁最高？ → <a href="https://www.jiemian.com/article/10109408.html" target="_blank">点击查看</a></li>
+                <li>【专访】诺奖得主新书译者李志青：中国绿色金融的发展应学习新能源汽车领域 → <a href="https://www.jiemian.com/article/7762086.html" target="_blank">点击查看</a></li>
+                <li>【独家】解读上海首部绿色金融法规：人人享有“碳账户”的理念将如何落地？ → <a href="https://www.jiemian.com/article/7664286.html" target="_blank">点击查看</a></li>
+            </ol>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">专业从业经历</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h3>2025.5 - 至今 | 自由职业 | 内容策划/专题访谈</h3>
+                    <p>参与蚂蚁集团&香港中文大学ATEC科技精英赛，采访具身智能专家、撰写直播/团队脚本；参与某银行2026-2030品牌战略规划，访谈高管、设计调研问卷并撰写品牌发展报告。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2024.7 - 2025.4 | 腾讯 | 金融科技公关经理</h3>
+                    <p>负责腾讯理财通、微信支付香港钱包、腾讯自选股和数字人民币等业务的内容传播策划和舆情应对，撰写视频脚本、新闻稿件、舆情应对方案；维护中国银行保险报、金融时报等监管主管媒体关系。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2024.1 - 2024.4 | 乐信 | 公关经理（内容策划）</h3>
+                    <p>负责分期电商、消保内容策划，撰写业务宣传稿件；参与公司与奥运击剑队合作项目，撰写新闻宣传稿、发布会演讲稿、现场视频脚本。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2020.11 - 2024.1 | 界面新闻 | 金融资深记者 <small>（核心媒体经历）</small></h3>
+                    <p>深耕银行/消费金融/金融科技领域，聚焦绿色金融/ESG/养老金融，负责原银保监会政策报道，累计撰稿757篇，篇均阅读15.5万；11次获总编辑好稿奖，2021年获评“优秀记者”并晋升，2022年部门绩效第一，2023年前三。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2018.7 - 2020.10 | 凤凰网财经WEMONEY频道 | 记者</h3>
+                    <p>负责金融科技/消费金融/互联网保险/民营银行等条线报道，开拓维护核心采访资源；独立策划“消金十年回头望”等行业专题，产出多篇独家深度报道。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2016.6 - 2018.6 | 浙江广播电视集团中国蓝新闻 | 记者</h3>
+                    <p>负责浙江省两会、蚂蚁集团等条线报道；参与G20峰会、全国两会主题报道，作品获<span class="award">中国新闻奖网络专题三等奖</span>、<span class="award">浙江省第二十七届人大新闻奖三等奖</span>。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="section-title">教育背景</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    2018.12 - 2022.12 | 中国人民大学 | 金融学 | 经济学硕士（在职）
+                    <small>补充金融专业知识，夯实金融领域报道专业基础</small>
+                </div>
+                <div class="education-item">
+                    2012.9 - 2016.6 | 浙江传媒学院 | 广播电视新闻学 | 本科
+                    <small>GPA3.88/4.0，3次校一等奖学金，浙江广电集团奖学金，浙江省优秀毕业生；毕业作品深度调查报道获学院优秀作品二等奖，夯实新闻采编核心能力</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">联系方式</h2>
+            <div class="contact-info">
+                <p>电话：15757161782</p>
+                <p>邮箱：zyl_zjcm@163.com</p>
+                <p>求职意向：金融记者</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        © 2026 曾仰琳 · 金融记者求职作品集 | 所有作品均为原创，未经授权禁止转载
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
